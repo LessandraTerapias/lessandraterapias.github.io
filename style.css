@@ -63,11 +63,11 @@ header h1 {
 
 .certificado img {
  width: 260px;
- margin: 20px 0;
+ margin: 0;
  display: block;
  margin-left: auto;
  margin-right: auto;
- transition: ransform 0.3 ease;
+ transition: transform 0.3 ease;
 }
 
 .certificado img:hover{
