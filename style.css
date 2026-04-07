@@ -1,0 +1,101 @@
+
+body {
+ margin: 0;
+ font-family: 'Segoe UI', sans-serif;
+ background: linear-gradient(to right, #f8f3ff, #fff0f6);
+}
+
+/* HEADER */
+header {
+ text-align: center;
+ padding: 50px 20px;
+}
+
+header h1 {
+ color: #6a2c91;
+}
+
+/* SECCIONES */
+.section {
+ padding: 40px 20px;
+}
+
+/* TERAPIA DESTACADA */
+.highlight {
+ background: linear-gradient(135deg, #6a2c91, #c9a7eb);
+ color: white;
+ padding: 30px;
+ border-radius: 20px;
+ margin-bottom: 40px;
+ position: relative;
+}
+
+/* ETIQUETA */
+.badge {
+ position: absolute;
+ top: 10px;
+ right: 10px;
+ background: gold;
+ padding: 5px 10px;
+ border-radius: 15px;
+ font-size: 12px;
+}
+
+/* SERVICIOS */
+.services {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+ gap: 20px;
+}
+
+.card {
+ background: white;
+ padding: 20px;
+ border-radius: 15px;
+ box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* CERTIFICADO */
+.certificado {
+ text-align: center;
+ margin: 40px 0;
+}
+
+.certificado img {
+ width: 260px;
+ border-radius: 20px;
+ box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* CONTACTO */
+.contact {
+ background: #6a2c91;
+ color: white;
+ padding: 40px 20px;
+}
+
+input, select, textarea {
+ width: 100%;
+ margin: 8px 0;
+ padding: 10px;
+ border-radius: 10px;
+ border: none;
+}
+
+button {
+ width: 100%;
+ padding: 12px;
+ border-radius: 20px;
+ border: none;
+ background: #25D366;
+ color: white;
+ font-size: 16px;
+}
+
+/* FOOTER */
+footer {
+ text-align: center;
+ padding: 15px;
+ background: #333;
+ color: white;
+}
