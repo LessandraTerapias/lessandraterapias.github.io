@@ -8,7 +8,14 @@
 </head>
 
 <body>
-
+    <div id="contenedor-dropdown"></div>
+<script>
+  fetch("dropdown.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("contenedor-dropdown").innerHTML = data;
+    });
+</script>
 <header>
  <h1>Reiki</h1>
  <p>Reiki explicacion</p>
