@@ -7,7 +7,7 @@ body {
 
 /* HEADER */
 header {
- text-align: center;
+ text-align: left;
  padding: 50px 20px;
 }
 
@@ -176,3 +176,32 @@ footer {
  color: white;
 }
 
+.faq details {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.faq summary {
+  cursor: pointer;
+  font-weight: 500;
+  list-style: none;
+}
+
+.faq summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Flechita */
+.faq summary::after {
+  content: "＋";
+  float: right;
+}
+
+.faq details[open] summary::after {
+  content: "−";
+}
+
+.faq p {
+  margin-top: 10px;
+  color: #555;
+}
