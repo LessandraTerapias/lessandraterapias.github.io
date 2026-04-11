@@ -9,10 +9,24 @@
 
 <body>
 
+ <div id="contenedor-dropdown"></div>
+
+<script>
+  fetch("dropdown.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("contenedor-dropdown").innerHTML = data;
+    });
+</script>
+
+
 <header>
  <h1>Lessandra Rodrigues</h1>
  <p>Bienvenido a tu espacio de salud física y energética en Gandia</p>
 </header>
+
+
+
 
 <section class="section" onclick="location.href='lnt.html'"></section>>
 

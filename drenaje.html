@@ -14,6 +14,16 @@
  <p>Drenaje Linfatico explicacion</p>
 </header>
 
+ <div id="contenedor-dropdown"></div>
+
+<script>
+  fetch("dropdown.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("contenedor-dropdown").innerHTML = data;
+    });
+</script>
+
 
 
 <section class="contact">
