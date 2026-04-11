@@ -7,7 +7,7 @@ body {
 
 /* HEADER */
 header {
- text-align: left;
+ text-align: center;
  padding: 50px 20px;
 }
 
@@ -18,6 +18,17 @@ header h1 {
 /* SECCIONES */
 .section {
  padding: 40px 20px;
+}
+
+.page_body{
+    text-align: center;
+    padding: 10px 20px;
+}
+.page_body h1 {
+ color: #6a2c91;
+}
+.page_body p {
+ text-align: left;
 }
 
 /* TERAPIA DESTACADA */
