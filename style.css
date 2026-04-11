@@ -110,6 +110,17 @@ button {
   font-size: 16px;
 }
 
+.btn-home {
+background: #6a2c91;
+  color: white;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+
 /* Contenedor */
 .dropdown {
   position: relative;
@@ -164,3 +175,4 @@ footer {
  background: #333;
  color: white;
 }
+
