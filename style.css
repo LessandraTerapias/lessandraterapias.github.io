@@ -85,6 +85,45 @@ header h1 {
     transform: scale(1.03);
 }
 
+
+/* sobre mi */
+.lessa {
+ text-align: center;
+ margin: 40px 0;
+}
+
+.lessa img {
+ width: 500px;
+ margin: 0;
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
+ transition: transform 0.3 ease;
+}
+
+.lessa img:hover{
+    transform: scale(1.03);
+}
+
+.masage {
+ text-align: center;
+ margin: 40px 0;
+}
+
+.masage img {
+ width: 50%;
+ height: 50%;
+ margin: 0;
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
+ transition: transform 0.3 ease;
+}
+
+.masage img:hover{
+    transform: scale(1.03);
+}
+
 /* CONTACTO */
 .contact {
  background: #6a2c91;

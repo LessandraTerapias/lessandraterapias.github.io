@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Sobre Mi</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+ <div id="contenedor-dropdown"></div>
+
+<script>
+  fetch("dropdown.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("contenedor-dropdown").innerHTML = data;
+    });
+</script>
+<header>
+ <h1>Sobre mi<br> Lessandra Rodrigues</h1>
+  <!-- Sobre mi -->
+ <div class="lessa">
+     <img src="sobre_mi.jpg">
+ </div>
+
+ <p style="text-align: left;">
+  Hola, soy Lessandra, con más de 10 años de experiencia en terapias de rehabilitación del cuerpo físico y canalización energética.<br><br>
+
+
+En el 2015 tuve un accidente de tráfico que lesionó mi rodilla y lumbares. Después de siete meses  de rehabilitación diaria, comprendí desde mi propia experiencia la importancia del acompañamiento, la escucha y la sanación integral. <br><br>
+
+Fue entonces cuando comenzó mi camino en el mundo terapéutico donde comencé mis estudios en rehabilitación de fisioterapia, quiromasaje, masaje deportivo, osteopatía, biodinámica craneosacral, y diferentes terapias energéticas como el Reiki, y diferentes técnicas de canalización energéticas.<br><br>
+
+Sin embargo, con los años seguía pensando que hacía falta una herramienta que integrara todos estos conceptos y fue cuando descubrí La Nueva Terapia®, una  herramienta que sumó aún más conciencia, profundidad y sensibilidad a mi forma de acompañar las personas al día de hoy.<br><br>
+
+
+Porque mi propósito sigue siendo acompañar a la sanación del cuerpo desde una mirada más integrativa y compasiva.
+
+
+ </p>
+</header>
+
+ <div class="masage">
+     <img src="masage.jpg">
+ </div>
+
+
+<section class="contact">
+
+ <h2>Reserva tu cita</h2>
+
+ <form action="https://formsubmit.co/lessaterapias12@gmail.com" method="POST">
+     <input type="text" name="Nombre" placeholder="Nombre" required>
+     <input type="tel" name="Telefono" placeholder="Teléfono" required>
+
+     <select name="Servicio" >
+         <option value =1>La Nueva Terapia®</option>
+         <option value =2>Osteopatía</option>
+         <option value =3 selected>Quiromasaje</option>
+         <option value =4>Drenaje Linfático</option>
+         <option value =5>Reiki</option>
+         <option value =6>Madero terapia</option>
+         <option value =7>Biodinamica</option>
+     </select>
+
+     <input type="date" name="Fecha" required>
+     <input type="time" name="hora" value="14:00" min="09:00" max="19:00" required>
+     <textarea name="Mensaje" placeholder="Mensaje"></textarea>
+
+     <button type="submit">Reservar cita</button>
+ </form>
+ <p>📞 601 861 940</p>
+ <p>📧 lessaterapias12@gmail.com</p>
+ <p>📍 Gandia</p>
+
+</section>
+
+<footer>
+ © 2026 Lessandra Rodrigues
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
