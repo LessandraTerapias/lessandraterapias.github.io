@@ -93,7 +93,8 @@ header h1 {
 }
 
 .lessa img {
- width: 500px;
+ width: 100%;
+ height: auto;
  margin: 0;
  display: block;
  margin-left: auto;
@@ -111,8 +112,8 @@ header h1 {
 }
 
 .masage img {
- width: 50%;
- height: 50%;
+ width: 60%;
+ height: auto;
  margin: 0;
  display: block;
  margin-left: auto;
