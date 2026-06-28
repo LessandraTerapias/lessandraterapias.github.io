@@ -161,8 +161,17 @@ button {
   font-size: 24px;
 }
 
+.dropdown-btn svg {
+    width: 32px;
+    height: 32px;
+}
+
+.dropdown-btn:hover {
+    opacity: 0.8;
+}
+
 .btn-home {
-background: #6a2c91;
+  background: #6a2c91;
   color: white;
   padding: 12px 18px;
   border: none;
@@ -171,6 +180,14 @@ background: #6a2c91;
   font-size: 24px;
 }
 
+.btn-home svg {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-home:hover {
+    opacity: 0.8;
+}
 
 /* Contenedor */
 .dropdown {
