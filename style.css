@@ -397,3 +397,24 @@ footer {
 
     z-index: 9999;
 }
+
+.titulo-contacto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.whatsapp-contacto {
+    background: #25D366;
+    color: white;
+
+    padding: 8px 12px;
+    border-radius: 20px;
+
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
