@@ -7,9 +7,23 @@
  <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<header class="hero">
+    <div class="hero-info">
 
- <div id="contenedor-dropdown"></div>
+        <img src="logo_3.png"
+             alt="Lessandra Rodrigues"
+             class="hero-foto">
+
+        <div class="hero-texto">
+                <h1>
+        <a href="index.html" class="titulo-enlace">
+            Lessandra Rodrigues
+        </a>
+    </h1>
+        </div>
+    </div>
+
+     <div id="contenedor-dropdown"></div>
 
 <script>
   fetch("dropdown.html")
@@ -18,10 +32,11 @@
       document.getElementById("contenedor-dropdown").innerHTML = data;
     });
 </script>
+</header>
 
 
 <header>
- <h1>Pide tu Cita</h1>
+ <h1 class="titulo-centro">Pide tu Cita</h1>
  <p>en la mayor brevedad posible te llamare al telefono</p>
 </header>
 
