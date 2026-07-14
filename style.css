@@ -146,6 +146,7 @@ input, select, textarea {
  padding: 10px;
  border-radius: 10px;
  border: none;
+ box-sizing: border-box;
 }
 
 button {
@@ -159,58 +160,58 @@ button {
 }
 
 /* Botón */
-.dropdown-btn {
-  background: #6a2c91;
-  color: white;
-  padding: 12px 18px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 24px;
-  
-  margin-top: 15px;     /* espacio arriba */
-  margin-left: 30px;    /* mismo margen que el resto */
-}
-
-.dropdown-btn svg {
-    width: 32px;
-    height: 32px;
-}
-
-.dropdown-btn:hover {
-    opacity: 0.8;
-}
-
+.dropdown-btn,
 .btn-home {
-  background: #6a2c91;
-  color: white;
-  padding: 12px 18px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 24px;
-  margin-top: 15px;     /* espacio arriba */
-  margin-left: 30px;    /* mismo margen que el resto */
-  
+    background: #6a2c91;
+    color: white;
+
+    width: 60px;
+    height: 60px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+
+    text-decoration: none;
+    box-sizing: border-box;
+}
+.dropdown-btn {
+    font-size: 32px;
 }
 
 .btn-home svg {
     width: 32px;
     height: 32px;
-    
 }
-
-.btn-home:hover {
-    opacity: 0.8;
+.btn-home svg {
+    width: 36px;
+    height: 36px;
 }
 
 /* Contenedor */
 .dropdown {
-  position: relative;
-  display: inline-block;
-  color:  white;
-  background: white;
+    position: relative;
+    display: inline-block;
+    color: white;
+    background: white;
+
+    margin-left: 0;
+    margin-top: 0;
 }
+.dropdown {
+    margin-left: 30px;
+}
+#contenedor-dropdown {
+    padding-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 
 /* Menú oculto */
 .dropdown-content {
