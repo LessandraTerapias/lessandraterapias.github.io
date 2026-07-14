@@ -351,3 +351,23 @@ footer {
 }
 
 
+@media (max-width: 768px) {
+
+    .hero {
+        padding: 15px;
+    }
+
+    .hero-foto {
+        width: 60px;
+        height: 60px;
+    }
+
+    .hero-texto h1 {
+        font-size: 2rem;
+    }
+
+    .hero-info {
+        gap: 10px;
+    }
+
+}
