@@ -200,24 +200,20 @@ button {
     display: inline-block;
 }
 .dropdown-btn {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
 
-    font-size: 26px;
+    background: transparent;
+    border: none;
 
-    background: rgba(255,255,255,0.15);
     color: white;
+    font-size: 24px;
 
-    border-radius: 12px;
-    border: 1px solid rgba(255,255,255,0.2);
+    cursor: pointer;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin-top: -100px;
+    padding: 0;
 
-    position: relative;
-
-    margin-top: -8px;
 }
 /* Botón 
 .dropdown-btn,
