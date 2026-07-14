@@ -6,28 +6,33 @@
  <title>Lessandra Rodrigues</title>
  <link rel="stylesheet" href="style.css">
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+ <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
- <div id="contenedor-dropdown"></div>
+<header class="hero">
+    <div class="hero-info">
 
-<script>
-  fetch("dropdown.html")
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById("contenedor-dropdown").innerHTML = data;
-    });
-</script>
+        <img src="lessandra.jpg"
+             alt="Lessandra Rodrigues"
+             class="hero-foto">
 
+        <div class="hero-texto">
+            <h1>Lessandra Rodrigues</h1>
+        </div>
+    </div>
 
-<header>
- <h1>
-     <a href="sobre_mi.html" class="titulo-enlace">Lessandra Rodrigues</a>
-     
-    </h1>
+        <div class="dropdown">
+        <button class="dropdown-btn" onclick="toggleMenu()">&#9776;</button>
 
- <p>Bienvenido a tu espacio de salud física y energética en Gandia</p>
+        <div id="menu" class="dropdown-content">
+           
+        </div>
+        
+    </div>
 </header>
 
 <section class="section"></section>
