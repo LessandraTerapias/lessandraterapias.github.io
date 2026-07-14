@@ -37,8 +37,13 @@ header h1 {
  color: white;
  padding: 30px;
  border-radius: 20px;
- margin-bottom: 40px;
+ margin: 0 30px 40px 30px;
  position: relative;
+ 
+}
+
+.titulo-centro {
+    text-align: center;
 }
 
 /* ETIQUETA */
@@ -54,9 +59,11 @@ header h1 {
 
 /* SERVICIOS */
 .services {
- display: grid;
- grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
- gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .card {
@@ -127,9 +134,10 @@ header h1 {
 
 /* CONTACTO */
 .contact {
- background: #6a2c91;
- color: white;
- padding: 40px 20px;
+    background: #6a2c91;
+    color: white;
+    padding: 40px 30px;
+    margin-top: 50px;
 }
 
 input, select, textarea {
@@ -159,6 +167,9 @@ button {
   border-radius: 8px;
   cursor: pointer;
   font-size: 24px;
+  
+  margin-top: 15px;     /* espacio arriba */
+  margin-left: 30px;    /* mismo margen que el resto */
 }
 
 .dropdown-btn svg {
@@ -178,11 +189,15 @@ button {
   border-radius: 8px;
   cursor: pointer;
   font-size: 24px;
+  margin-top: 15px;     /* espacio arriba */
+  margin-left: 30px;    /* mismo margen que el resto */
+  
 }
 
 .btn-home svg {
     width: 32px;
     height: 32px;
+    
 }
 
 .btn-home:hover {
@@ -207,6 +222,7 @@ button {
   border-radius: 10px;
   overflow: hidden;
   margin-top: 8px;
+  margin-left: 30px; /* ← nuevo */
   animation: fadeIn 0.2s ease;
   z-index: 9999;
 }
@@ -279,3 +295,5 @@ footer {
     text-decoration: none;   /* Quita el subrayado */
     font: inherit;           /* Hereda fuente, tamaño, peso, etc. */
 }
+
+
