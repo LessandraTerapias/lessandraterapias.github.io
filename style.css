@@ -80,7 +80,15 @@ body {
 }
 
 .titulo-centro {
+    
     text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.3rem;
+    font-weight: 600;
+    color: #6a2c91;
+    margin: 35px 0 25px;
+    letter-spacing: 1px;
+
 }
 
 /* ETIQUETA */
@@ -314,7 +322,7 @@ footer {
 
 .faq details {
   border-bottom: 1px solid #ddd;
-  padding: 10px 0;
+   padding: 0 20px;
 }
 
 .faq summary {
