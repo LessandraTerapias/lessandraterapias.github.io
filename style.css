@@ -20,12 +20,14 @@ body {
     );
 
     color: white;
+    overflow:hidden;
 }
 
 .hero-info {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
+    flex:1
 }
 
 .hero-foto {
