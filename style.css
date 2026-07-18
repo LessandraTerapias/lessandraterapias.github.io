@@ -390,6 +390,10 @@ footer {
     .hero-info {
         gap: 10px;
     }
+
+    .titulo-centro {
+        font-size: 2.5rem;
+    }
     
 
 }
@@ -440,4 +444,15 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+
+.titulo-card {
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #000;
+    margin: 10px 0 15px;
+    line-height: 1.2;
 }
