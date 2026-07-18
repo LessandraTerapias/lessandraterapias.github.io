@@ -3,12 +3,15 @@
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Pide tu cita</title>
+ <title>Madero terapia</title>
  <link rel="stylesheet" href="style.css">
+ <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 </head>
 
 <header class="hero">
-    <div class="hero-info">
+    <div class="hero-info"> 
 
         <img src="logo_3.png"
              alt="Lessandra Rodrigues"
@@ -34,51 +37,34 @@
 </script>
 </header>
 
-
 <header>
  <h1 class="titulo-centro">Pide tu Cita</h1>
- <p>en la mayor brevedad posible te llamare al telefono</p>
-</header>
+ </header>
+ <div class="page_body">
+<h2>
+    Encuentra tu espacio de salud física y energetica en Gandia
+</p>
 
 
-<section class="contact">
+<div class="mapa">
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3101.9177548994485!2d-0.18100712352119322!3d38.97154594232494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd61e9c51142ef03%3A0x9a26a7a125bd39d9!2sLessandra%20Rodrigues%20bienestar%20f%C3%ADsico%20y%20energ%C3%A9tico!5e0!3m2!1ses!2ses!4v1784392266758!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+        loading="lazy"
+        allowfullscreen
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+</div>
+</div>
 
- <h2  class="titulo-contacto">Reserva tu cita
 
-
-    <a href="https://wa.me/34601861940?text=Hola%20Lessandra,%20me%20gustaría%20pedir%20información%20sobre%20tus%20terapias."
-    class="whatsapp-contacto"
-    target="_blank">
-
-        <i class="fa-brands fa-whatsapp"></i>
-
-    </a>
-</h2>
-
- <form action="https://formsubmit.co/lessaterapias12@gmail.com" method="POST">
-     <input type="text" name="Nombre" placeholder="Nombre" required>
-     <input type="tel" name="Telefono" placeholder="Teléfono" required>
-
-     <select name="Servicio">
-         <option>La Nueva Terapia®</option>
-         <option>Osteopatía</option>
-         <option>Quiromasaje</option>
-         <option>Drenaje Linfático</option>
-         <option>Reiki</option>
-         <option>Madero terapia</option>
-         <option>Biodinamica</option>
-     </select>
-
-     <input type="date" name="Fecha" required>
-     <input type="time" name="hora" value="14:00" min="09:00" max="19:00" required>
-     <textarea name="Mensaje" placeholder="Mensaje"></textarea>
-
-     <button type="submit">Reservar cita</button>
- </form>
-
- <p>📞 601 861 940</p>
- <p>📧 lessaterapias12@gmail.com</p>
- <p>📍 Gandia</p>
+<div id="contenedor-contact"></div>
+<script>
+fetch("contact.html")
+    .then(res => res.text())
+    .then(data => {
+        document.getElementById("contenedor-contact").innerHTML = data;
+    });
+</script>
 
 </section>
 
