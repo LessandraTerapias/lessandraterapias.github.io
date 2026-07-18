@@ -1,12 +1,22 @@
 <!DOCTYPE html>
+
 <html lang="es">
+
+
+
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>Sobre Mi</title>
  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
 </head>
 
+
+<body>
 <header class="hero">
     <div class="hero-info">
 
@@ -65,41 +75,24 @@ Porque mi propósito sigue siendo acompañar a la sanación del cuerpo desde una
  </div>
 
 
-<section class="contact">
+<div id="contenedor-contact"></div>
+<script>
+fetch("contact.html")
+    .then(res => res.text())
+    .then(data => {
+        document.getElementById("contenedor-contact").innerHTML = data;
+    });
+</script>
 
- <h2>Reserva tu cita</h2>
-
- <form action="https://formsubmit.co/lessaterapias12@gmail.com" method="POST">
-     <input type="text" name="Nombre" placeholder="Nombre" required>
-     <input type="tel" name="Telefono" placeholder="Teléfono" required>
-
-     <select name="Servicio" >
-         <option value =1>La Nueva Terapia®</option>
-         <option value =2>Osteopatía</option>
-         <option value =3 selected>Quiromasaje</option>
-         <option value =4>Drenaje Linfático</option>
-         <option value =5>Reiki</option>
-         <option value =6>Madero terapia</option>
-         <option value =7>Biodinamica</option>
-     </select>
-
-     <input type="date" name="Fecha" required>
-     <input type="time" name="hora" value="14:00" min="09:00" max="19:00" required>
-     <textarea name="Mensaje" placeholder="Mensaje"></textarea>
-
-     <button type="submit">Reservar cita</button>
- </form>
- <p>📞 601 861 940</p>
- <p>📧 lessaterapias12@gmail.com</p>
- <p>📍 Gandia</p>
-
-</section>
 
 <footer>
  © 2026 Lessandra Rodrigues
 </footer>
 
 <script src="script.js"></script>
+
+
+
 
 </body>
 </html>

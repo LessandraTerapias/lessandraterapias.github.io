@@ -11,6 +11,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&display=swap" rel="stylesheet">
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<script>
+fetch("contact.html")
+    .then(res => res.text())
+    .then(data => {
+        document.getElementById("contenedor-contact").innerHTML = data;
+    });
+</script>
+
 </head>
 
 <body>
@@ -108,47 +117,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 </section>
 
-<section class="contact">
 
- <h2  class="titulo-contacto">Reserva tu cita
+<div id="contenedor-contact"></div>
 
-
-    <a href="https://wa.me/34601861940?text=Hola%20Lessandra,%20me%20gustaría%20pedir%20información%20sobre%20tus%20terapias."
-    class="whatsapp-contacto"
-    target="_blank">
-
-        <i class="fa-brands fa-whatsapp"></i>
-
-    </a>
-    </h2>
-<section class="reviews">
-<!-- Elfsight Google Reviews | Untitled Google Reviews -->
-<script src="https://elfsightcdn.com/platform.js" async></script>
-<div class="elfsight-app-bd4551f7-34dc-444f-961d-a179e8cb6a41" data-elfsight-app-lazy></div>
-<section class="reviews"></section>
-
-
-
- <form action="https://formsubmit.co/lessaterapias12@gmail.com" method="POST">
-     <input type="text" name="Nombre" placeholder="Nombre" required>
-     <input type="tel" name="Telefono" placeholder="Teléfono" required>
-
-     <select name="Servicio">
-         <option>La Nueva Terapia®</option>
-         <option>Osteopatía</option>
-         <option>Quiromasaje</option>
-         <option>Drenaje Linfático</option>
-         <option>Reiki</option>
-         <option>Madero terapia</option>
-         <option>Biodinamica</option>
-     </select>
-
-     <input type="date" name="Fecha" required>
-     <input type="time" name="hora" value="14:00" min="09:00" max="19:00" required>
-     <textarea name="Mensaje" placeholder="Mensaje"></textarea>
-
-     <button type="submit">Reservar cita</button>
- </form>
 
  <p>📞 601 861 940</p>
  <p>📧 lessaterapias12@gmail.com</p>

@@ -10,6 +10,8 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>Biodinamica</title>
  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <header class="hero">
@@ -69,16 +71,17 @@ Mi objetivo es ofrecerte un entorno seguro y respetuoso donde tu cuerpo pueda re
 
 <h2>Preguntas Frecuentes</h2>
 </div>
+
 <div class="faq">
 
   <details>
     <summary>¿Qué se siente durante una sesión?</summary>
-    <p>Cada persona lo vive de forma diferente. Muchas describen una sensación de profunda relajación, calma, ligereza o descanso, aunque cada experiencia es completamente personal.</p>
+    <p>Cada persona vive la experiencia de forma diferente. Muchas describen una sensación de profunda relajación, calma, ligereza o descanso, aunque cada sesión es única.</p>
   </details>
 
   <details>
     <summary>¿La Biodinámica Craneosacral duele?</summary>
-    <p>No. Es una terapia extremadamente suave que se realiza mediante un contacto ligero, sin manipulaciones bruscas.</p>
+    <p>No. Es una terapia extremadamente suave que se realiza mediante un contacto ligero y respetuoso, sin manipulaciones bruscas ni movimientos rápidos.</p>
   </details>
 
   <details>
@@ -87,13 +90,13 @@ Mi objetivo es ofrecerte un entorno seguro y respetuoso donde tu cuerpo pueda re
   </details>
 
   <details>
-    <summary>¿Quién puede beneficiarse de esta terapia?</summary>
-    <p>Está indicada para personas que desean reducir el estrés, aliviar tensiones físicas o emocionales, mejorar su bienestar general o disfrutar de un espacio de profunda relajación.</p>
+    <summary>¿Para quién está indicada esta terapia?</summary>
+    <p>Está recomendada para personas que desean reducir el estrés, aliviar tensiones físicas o emocionales, mejorar su bienestar general o disfrutar de un espacio de profunda relajación.</p>
   </details>
 
   <details>
-    <summary>¿Cuántas sesiones necesito?</summary>
-    <p>Cada persona es diferente. Tras una primera sesión podremos valorar cuál es la frecuencia más adecuada según tus necesidades.</p>
+    <summary>¿Cuántas sesiones son recomendables?</summary>
+    <p>Depende de cada persona y de sus necesidades. Tras una primera sesión podremos valorar la frecuencia más adecuada para alcanzar tus objetivos.</p>
   </details>
 
   <details>
@@ -103,36 +106,20 @@ Mi objetivo es ofrecerte un entorno seguro y respetuoso donde tu cuerpo pueda re
 
   <details>
     <summary>¿Necesito hacer algo antes o después de la sesión?</summary>
-    <p>No es necesario. Simplemente te recomiendo acudir con ropa cómoda y, después de la sesión, dedicar unos minutos a disfrutar de la sensación de calma e hidratarte adecuadamente.</p>
+    <p>No es necesario realizar ninguna preparación especial. Te recomiendo acudir con ropa cómoda y, después de la sesión, beber agua y dedicar unos minutos a disfrutar del estado de calma y bienestar que suele acompañar al tratamiento.</p>
   </details>
 
 </div>
 
 
-<section class="contact">
-
- <h2>Reserva tu cita</h2>
-
-  <form action="https://formsubmit.co/lessaterapias12@gmail.com" method="POST">
-     <input type="text" name="Nombre" placeholder="Nombre" required>
-     <input type="tel" name="Telefono" placeholder="Teléfono" required>
-
-     <select name="Servicio" >
-         <option value =1>La Nueva Terapia®</option>
-         <option value =2>Osteopatía</option>
-         <option value =3>Quiromasaje</option>
-         <option value =4>Drenaje Linfático</option>
-         <option value =5>Reiki</option>
-         <option value =6>Madero terapia</option>
-         <option value =7 selected >Biodinamica</option>
-     </select>
-
-     <input type="date" name="Fecha" required>
-     <input type="time" name="hora" value="14:00" min="09:00" max="19:00" required>
-     <textarea name="Mensaje" placeholder="Mensaje"></textarea>
-
-     <button type="submit">Reservar cita</button>
- </form>
+<div id="contenedor-contact"></div>
+<script>
+fetch("contact.html")
+    .then(res => res.text())
+    .then(data => {
+        document.getElementById("contenedor-contact").innerHTML = data;
+    });
+</script>
 
 
  <p>📞 601 861 940</p>
@@ -147,30 +134,6 @@ Mi objetivo es ofrecerte un entorno seguro y respetuoso donde tu cuerpo pueda re
 
 <script src="script.js"></script>
 
-</body>
-</html></title>
- <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-<header>
- <h1>Osteopatia</h1>
- <p>osteopatia explicacion</p>
-</header>
-
-
-
-<section class="contact">
-
- <h2>Reserva tu cita</h2>
-
-
- <p>📞 601 861 940</p>
- <p>📧 lessaterapias12@gmail.com</p>
- <p>📍 Gandia</p>
-
-</section>
 
 <footer>
  © 2026 Lessandra Rodrigues
