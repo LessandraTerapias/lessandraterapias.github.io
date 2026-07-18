@@ -404,18 +404,18 @@ footer {
         height:300px;
     }
     .hero-banner{
-        height: 320px;
+
+        height:55vh;
+
+        min-height:320px;
+
     }
 
-    .hero-btn{
+    .hero-banner img{
 
-        font-size:1.1rem;
+        object-position:center top;
 
-        padding:15px 32px;
-
-        margin-top:25px;
     }
-    
 
 
 
@@ -499,57 +499,96 @@ footer {
 
 
 .hero-banner{
-    position: relative;
-    width: 100%;
-    height: 550px;
-    overflow: hidden;
+
+    position:relative;
+
+    width:100%;
+
+    height:70vh;
+
+    min-height:420px;
+
+    max-height:720px;
+
+    overflow:hidden;
 }
 
 .hero-banner img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center center;
-    display: block;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    object-position:center center;
+
+    display:block;
 }
 
-.hero-banner-texto{
+
+.hero-overlay{
 
     position:absolute;
+
     inset:0;
 
-    pointer-events:none;
-}
+    display:flex;
 
-.hero-btn{
-    position:absolute;
-    padding:18px 42px;
+    flex-direction:column;
 
-    border-radius:50px;
+    justify-content:center;
 
-    background:linear-gradient(135deg,#7a3fc6,#5a267d);
+    align-items:center;
+
+    text-align:center;
 
     color:white;
 
+    z-index:10;
+
+    padding:20px;
+}
+.hero-overlay h2{
+
+    font-size:clamp(2.3rem,6vw,5rem);
+
+}
+
+.hero-overlay p{
+
+    font-size:clamp(1rem,2vw,1.5rem);
+
+}
+.hero-btn{
+
+      display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;
+
+    margin-top:40px;
+
+    padding:14px 32px;
+
+    font-size:clamp(1rem,1.2vw,1.15rem);
+    font-weight:600;
+
+    color:#fff;
     text-decoration:none;
 
-    font-size:1.3rem;
+    border-radius:999px;
 
-    box-shadow:0 10px 25px rgba(0,0,0,.30);
+    /* Glassmorphism */
+    background:rgba(123,75,176,.28);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
 
+    border:1px solid rgba(255,255,255,.28);
 
-    left:50%;
-    top:63%;
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.20),
+        inset 0 1px 0 rgba(255,255,255,.22);
 
-    transform:translateX(-50%);
-
-    pointer-events:auto;
-
+    transition:all .35s ease;
 }
 
-.hero-btn:hover{
-
-    transform: translateX(-50%) translateY(-3px);
-
-    background:linear-gradient(135deg,#8c52d9,#6a2c91);
-}
