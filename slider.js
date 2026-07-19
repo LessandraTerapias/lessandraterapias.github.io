@@ -36,7 +36,7 @@ const slides = [
     },
 
     {
-        imagen: "hero-lnt.jpg",
+        imagen: "hero-lnt.png",
         titulo: "La Nueva Terapia®",
         texto: "Una terapia integrativa que trabaja el equilibrio físico, emocional y energético."
     },
