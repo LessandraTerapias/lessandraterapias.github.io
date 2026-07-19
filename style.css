@@ -1,4 +1,10 @@
+*,
+*::before,
+*::after{
 
+    box-sizing:border-box;
+
+}
 body {
 
     width:100%;
@@ -19,11 +25,13 @@ body {
 
     z-index: 9999;
 
+     box-sizing:border-box;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    padding: 5px 5px;
+    padding: 5px;
 
     background: linear-gradient(
         to right,
@@ -33,6 +41,7 @@ body {
     );
 
     color: white;
+    overflow:hidden;
 }
 
 .hero-info {
