@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Drenaje linfatico</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+
+<header class="hero">
+    <div class="hero-info">
+
+        <img src="logo_3.png"
+             alt="Lessandra Rodrigues"
+             class="hero-foto">
+
+        <div class="hero-texto">
+            <h1>Lessandra Rodrigues</h1>
+        </div>
+    </div>
+
+<body>
+     <div id="contenedor-dropdown"></div>
+
+<script>
+  fetch("dropdown.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("contenedor-dropdown").innerHTML = data;
+    });
+</script>
+
+    </div>
+</header>
