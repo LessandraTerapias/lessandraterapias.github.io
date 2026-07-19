@@ -1,5 +1,9 @@
 
 body {
+
+    width:100%;
+
+    overflow-x:hidden;
  margin: 0;
  font-family: 'Segoe UI', sans-serif;
  background: linear-gradient(to right, #f8f3ff, #fff0f6);
