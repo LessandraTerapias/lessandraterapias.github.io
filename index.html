@@ -21,29 +21,6 @@ fetch("contact.html")
 </script>
 
 
-
-<script>
-
-window.addEventListener("load",()=>{
-
-    document.querySelectorAll("*").forEach(el=>{
-
-        const r=el.getBoundingClientRect();
-
-        if(r.right>window.innerWidth){
-
-            console.log(el,r.right-window.innerWidth);
-
-            el.style.outline="3px solid red";
-
-        }
-
-    });
-
-});
-
-</script>
-
 </head>
 
 
