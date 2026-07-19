@@ -606,6 +606,33 @@ registerEvents(){
 
         });
 
+
+        this.hero.addEventListener("touchstart",(e)=>{
+
+    this.touchStart = e.touches[0].clientX;
+
+});
+
+this.hero.addEventListener("touchend",(e)=>{
+
+    this.touchEnd = e.changedTouches[0].clientX;
+
+    const distancia = this.touchStart - this.touchEnd;
+
+    if(Math.abs(distancia) < 50) return;
+
+    if(distancia > 0){
+
+        this.next();
+
+    }else{
+
+        this.prev();
+
+    }
+
+});
+
 }
     
 
