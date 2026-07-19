@@ -728,6 +728,7 @@ footer {
 
 .slider-test-btn{
 
+    display:none;
     position:absolute;
 
     top:50%;
