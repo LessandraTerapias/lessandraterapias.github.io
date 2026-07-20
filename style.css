@@ -942,40 +942,65 @@ footer {
 
 }
 
-.telefono-enlace:hover{
-
-    color: #cfa8ff;
-
-}
-
 /*=========================================
-=            ENLACES CONTACTO
+=        TARJETAS DE CONTACTO MINIMAL
 =========================================*/
 
-.contact-link{
+.contact-info{
 
-    color: rgba(255,255,255,.92);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
 
-    text-decoration: none;
+    gap:22px;
 
-    font-weight: 500;
-
-    transition: all .30s ease;
-
-    border-bottom: 1px solid transparent;
+    margin-top:40px;
 
 }
 
-.contact-link:hover{
+.contact-item{
 
-    color: #d9b7ff;
+    display:flex;
+    align-items:center;
 
-    border-bottom-color: rgba(217,183,255,.8);
+    gap:14px;
+
+    color:rgba(255,255,255,.92);
+
+    text-decoration:none;
+
+    transition:.3s;
 
 }
 
-.contact-link:active{
+.contact-item i{
 
-    color: #ffffff;
+    width:20px;
+
+    text-align:center;
+
+    color:#d7b6ff;
+
+    font-size:18px;
+
+}
+
+.contact-item span{
+
+    font-size:1.02rem;
+
+    line-height:1.5;
+
+}
+
+.contact-item:hover{
+
+    color:white;
+
+}
+
+.contact-item:hover i{
+
+    color:white;
 
 }
