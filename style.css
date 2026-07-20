@@ -94,6 +94,18 @@ body {
  text-align: left;
 }
 
+
+.page-title {
+    text-align: center;
+    font-family: 'Lora', serif;
+    font-size: 3.3rem;
+    font-weight: 600;
+    color: #6a2c91;
+    margin: 35px 0 25px;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
 /* TERAPIA DESTACADA */
 .highlight {
  background: linear-gradient(135deg, #6a2c91, #c9a7eb);
