@@ -1004,3 +1004,20 @@ footer {
     color:white;
 
 }
+
+@media (min-width:1200px){
+
+    .services,
+    .page_body,
+    .highlight,
+    .reviews,
+    .contact{
+
+        max-width:1200px;
+
+        margin-left:auto;
+        margin-right:auto;
+
+    }
+
+}
