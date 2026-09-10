@@ -103,7 +103,7 @@ body {
     color: #6a2c91;
     margin: 35px 0 25px;
     letter-spacing: 1px;
-    font-weight: 700;
+
 }
 
 /* TERAPIA DESTACADA */
@@ -412,6 +412,18 @@ footer {
 
 
 @media (max-width: 768px) {
+
+    .page-title {
+    text-align: center;
+    font-family: 'Lora', serif;
+    font-size: 3.3rem;
+    font-weight: 550;
+    color: #6a2c91;
+    margin: 35px 0 25px;
+    letter-spacing: 1px;
+
+}
+
 
     .hero {
         padding: 5px;
