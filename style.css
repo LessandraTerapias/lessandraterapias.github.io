@@ -1021,7 +1021,75 @@ footer {
     }
 
 }
+/* =========================================
+   MÓVIL EN HORIZONTAL
+   ========================================= */
 
+@media (max-width: 1024px) and (orientation: landscape) {
+
+    .hero {
+        padding: 4px 12px;
+        min-height: 68px;
+    }
+
+    .hero-foto {
+        width: 52px;
+        height: 52px;
+        border-width: 3px;
+    }
+
+    .hero-info {
+        gap: 8px;
+    }
+
+    .hero-texto h1 {
+        font-size: 2.2rem;
+        line-height: 1;
+    }
+
+    #contenedor-dropdown {
+        padding-top: 0;
+        gap: 6px;
+    }
+
+    .dropdown-btn {
+        width: 42px;
+        height: 42px;
+        font-size: 24px;
+        margin-top: 0;
+    }
+
+    .hero-banner {
+        height: calc(100vh - 68px);
+        min-height: 380px;
+    }
+
+    .hero-overlay {
+        padding: 15px;
+    }
+
+    .hero-overlay h2 {
+        font-size: clamp(1.8rem, 5vw, 3.2rem);
+    }
+
+    .hero-overlay p {
+        font-size: clamp(.9rem, 1.8vw, 1.2rem);
+    }
+
+    .hero-btn {
+        margin-top: 18px;
+        padding: 10px 24px;
+    }
+
+    .hero-servicios {
+        margin-top: 15px;
+        font-size: .85rem;
+    }
+
+    .hero-servicios span {
+        padding: 3px 7px;
+    }
+}
 @media (min-width:1024px){
 
     .contact form{
