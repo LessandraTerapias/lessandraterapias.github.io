@@ -98,12 +98,11 @@ body {
 .page-title {
     text-align: center;
     font-family: 'Lora', serif;
-    font-size: 3.3rem;
+    font-size: clamp(2rem, 7vw, 3.3rem);
     font-weight: 600;
     color: #6a2c91;
     margin: 35px 0 25px;
     letter-spacing: 1px;
-
 }
 
 /* TERAPIA DESTACADA */
@@ -416,7 +415,7 @@ footer {
     .page-title {
     text-align: center;
     font-family: 'Lora', serif;
-    font-size: 3.3rem;
+     font-size: clamp(2rem, 7vw, 3.3rem);
     font-weight: 550;
     color: #6a2c91;
     margin: 35px 0 25px;
