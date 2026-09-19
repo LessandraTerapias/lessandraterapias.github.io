@@ -40,7 +40,7 @@ const REVIEWS_API_URL =
 
 
 // Número máximo de caracteres que mostraremos inicialmente
-const MAX_REVIEW_LENGTH = 300;
+const MAX_REVIEW_LENGTH = 200;
 
 
 async function cargarResenas() {
@@ -487,6 +487,43 @@ async function cargarResenas() {
         reviewsPrev.addEventListener("click", () => {
 
             moverCarrusel(-1);
+
+        });
+
+        // ==========================================
+        // DESLIZAR CON EL DEDO EN MÓVIL
+        // ==========================================
+
+        let inicioTouchX = 0;
+        let finalTouchX = 0;
+
+        track.addEventListener("touchstart", event => {
+
+            inicioTouchX = event.touches[0].clientX;
+
+        }, { passive: true });
+
+
+        track.addEventListener("touchend", event => {
+
+            finalTouchX = event.changedTouches[0].clientX;
+
+            const diferencia = inicioTouchX - finalTouchX;
+
+            // Evitamos movimientos accidentales pequeños
+            if (Math.abs(diferencia) < 50) {
+                return;
+            }
+
+            // Deslizar hacia la izquierda → siguiente
+            if (diferencia > 0) {
+                moverCarrusel(1);
+            }
+
+            // Deslizar hacia la derecha → anterior
+            else {
+                moverCarrusel(-1);
+            }
 
         });
 
