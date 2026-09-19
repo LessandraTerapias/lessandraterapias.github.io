@@ -358,9 +358,17 @@ footer {
  color: white;
 }
 
+.faq {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
 .faq details {
-  border-bottom: 1px solid #ddd;
-   padding: 0 20px;
+    border-bottom: 1px solid #ddd;
+    padding: 0 20px;
 }
 
 .faq summary {
@@ -1030,6 +1038,11 @@ footer {
         margin-right:auto;
 
     }
+        .faq{
+        max-width:1200px;
+        margin-left:auto;
+        margin-right:auto;
+    }
 
 }
 /* =========================================
@@ -1632,4 +1645,18 @@ footer {
 
     box-shadow:
         0 5px 12px rgba(106, 44, 145, 0.25);
+}
+
+/* FORMULARIO EN MÓVIL HORIZONTAL */
+@media (min-width: 600px) and (max-width: 1199px) and (orientation: landscape) {
+
+    .contact {
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+        box-sizing: border-box;
+    }
+
 }
