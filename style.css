@@ -1228,3 +1228,408 @@ footer {
     transform:translateX(6px);
 
 }
+
+
+/* =========================================================
+   CARRUSEL DE RESEÑAS
+   ========================================================= */
+
+.reviews-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 55px;
+    box-sizing: border-box;
+}
+
+
+/* Contenedor horizontal */
+
+.reviews-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+
+    /* Ocultar barra de desplazamiento */
+    scrollbar-width: none;
+}
+
+.reviews-grid::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* Cada tarjeta */
+
+.review-card {
+    flex: 0 0 calc((100% - 80px) / 5);
+    scroll-snap-align: start;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   FLECHAS
+   ========================================================= */
+
+.reviews-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 42px;
+    height: 42px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #ffffff;
+    color: #6f329b;
+
+    font-size: 34px;
+    line-height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    box-shadow: 0 3px 12px rgba(80, 40, 100, 0.18);
+
+    z-index: 5;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.reviews-arrow:hover {
+    transform: translateY(-50%) scale(1.08);
+    box-shadow: 0 5px 18px rgba(80, 40, 100, 0.25);
+}
+
+.reviews-arrow-left {
+    left: 5px;
+}
+
+.reviews-arrow-right {
+    right: 5px;
+}
+
+
+/* Flecha desactivada */
+
+.reviews-arrow:disabled {
+    opacity: 0.25;
+    cursor: default;
+    box-shadow: none;
+}
+
+.reviews-arrow:disabled:hover {
+    transform: translateY(-50%);
+}
+
+
+/* =========================================================
+   TABLET / PANTALLAS MEDIANAS
+   ========================================================= */
+
+@media (max-width: 1199px) {
+
+    .review-card {
+        flex: 0 0 calc((100% - 60px) / 4);
+    }
+
+}
+
+
+/* =========================================================
+   TABLET PEQUEÑA
+   ========================================================= */
+
+@media (max-width: 899px) {
+
+    .reviews-carousel {
+        padding-left: 48px;
+        padding-right: 48px;
+    }
+
+    .review-card {
+        flex: 0 0 calc((100% - 40px) / 3);
+    }
+
+}
+
+
+/* =========================================================
+   MÓVIL VERTICAL
+   ========================================================= */
+
+@media (max-width: 599px) {
+
+    .reviews-carousel {
+        padding-left: 42px;
+        padding-right: 42px;
+    }
+
+    .review-card {
+        flex: 0 0 100%;
+    }
+
+    .reviews-arrow {
+        width: 36px;
+        height: 36px;
+        font-size: 29px;
+    }
+
+    .reviews-arrow-left {
+        left: 2px;
+    }
+
+    .reviews-arrow-right {
+        right: 2px;
+    }
+
+}
+
+
+/* =========================================================
+   MÓVIL EN HORIZONTAL
+   ========================================================= */
+
+@media (max-width: 899px) and (orientation: landscape) {
+
+    .review-card {
+        flex: 0 0 calc((100% - 20px) / 2);
+    }
+
+}
+
+/* =========================================
+   ANIMACIÓN DE LAS TARJETAS DE RESEÑAS
+   ========================================= */
+
+.review-card {
+    transition:
+        transform 0.45s ease,
+        opacity 0.45s ease,
+        box-shadow 0.45s ease;
+}
+
+/* Pequeño efecto al pasar el ratón en PC */
+@media (hover: hover) {
+
+    .review-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 30px rgba(80, 50, 90, 0.14);
+    }
+
+}
+
+/* =========================================
+   MOVIMIENTO DEL CARRUSEL
+   ========================================= */
+
+.reviews-grid.reviews-moving-left {
+    animation: reviewsSlideLeft 0.45s ease;
+}
+
+.reviews-grid.reviews-moving-right {
+    animation: reviewsSlideRight 0.45s ease;
+}
+
+
+@keyframes reviewsSlideLeft {
+
+    0% {
+        transform: translateX(12px);
+        opacity: 0.82;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+}
+
+
+@keyframes reviewsSlideRight {
+
+    0% {
+        transform: translateX(-12px);
+        opacity: 0.82;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+}
+
+/* Estrellas de las reseñas */
+.review-stars {
+    color: #D4AF37;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    line-height: 1;
+    margin-top: 4px;
+}
+
+/* =========================================================
+   BOTONES GOOGLE - RESEÑAS
+   ========================================================= */
+
+.reviews-google-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin: 35px auto 10px;
+    padding: 0 20px;
+}
+
+
+/* Botones */
+
+.reviews-google-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    min-width: 240px;
+
+    padding: 13px 24px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+
+    box-sizing: border-box;
+}
+
+
+/* Ver todas las reseñas */
+
+.reviews-google-btn-ver {
+    background: #6a2c91;
+    color: white;
+
+    box-shadow:
+        0 6px 18px rgba(106, 44, 145, 0.20);
+}
+
+
+/* Dejar una reseña */
+
+.reviews-google-btn-dejar {
+    background: white;
+    color: #6a2c91;
+
+    border: 1.5px solid #c9a7eb;
+
+    box-shadow:
+        0 5px 16px rgba(106, 44, 145, 0.12);
+}
+
+
+/* Efecto al pasar el ratón */
+
+.reviews-google-btn:hover {
+    transform: translateY(-3px);
+}
+
+
+.reviews-google-btn-ver:hover {
+    background: #7c3aa5;
+
+    box-shadow:
+        0 9px 24px rgba(106, 44, 145, 0.28);
+}
+
+
+.reviews-google-btn-dejar:hover {
+    background: #faf5ff;
+
+    border-color: #6a2c91;
+
+    box-shadow:
+        0 8px 22px rgba(106, 44, 145, 0.20);
+}
+
+
+/* =========================================================
+   MÓVIL
+   ========================================================= */
+
+@media (max-width: 599px) {
+
+    .reviews-google-buttons {
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 28px;
+    }
+
+    .reviews-google-btn {
+        width: 100%;
+        max-width: 320px;
+        min-width: 0;
+    }
+
+}
+
+/* =========================================================
+   BOTÓN LEER MÁS - RESEÑAS
+   ========================================================= */
+
+.review-more-btn {
+    width: auto;
+    padding: 6px 14px;
+
+    margin-top: 8px;
+
+    background: #6a2c91;
+    color: white;
+
+    border: none;
+    border-radius: 20px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        transform 0.2s ease,
+        box-shadow 0.3s ease;
+}
+
+.review-more-btn:hover {
+    background: #7c3aa5;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 5px 12px rgba(106, 44, 145, 0.25);
+}
