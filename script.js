@@ -490,42 +490,64 @@ async function cargarResenas() {
 
         });
 
-        // ==========================================
-        // DESLIZAR CON EL DEDO EN MÓVIL
-        // ==========================================
+       // ==========================================
+// DESLIZAR CON EL DEDO EN MÓVIL
+// ==========================================
 
-        let inicioTouchX = 0;
-        let finalTouchX = 0;
+let inicioTouchX = 0;
+let inicioTouchY = 0;
+let tocando = false;
 
-        track.addEventListener("touchstart", event => {
+track.addEventListener("touchstart", event => {
 
-            inicioTouchX = event.touches[0].clientX;
+    if (event.touches.length !== 1) return;
 
-        }, { passive: true });
+    inicioTouchX = event.touches[0].clientX;
+    inicioTouchY = event.touches[0].clientY;
+
+    tocando = true;
+
+}, { passive: true });
 
 
-        track.addEventListener("touchend", event => {
+track.addEventListener("touchend", event => {
 
-            finalTouchX = event.changedTouches[0].clientX;
+    if (!tocando) return;
 
-            const diferencia = inicioTouchX - finalTouchX;
+    tocando = false;
 
-            // Evitamos movimientos accidentales pequeños
-            if (Math.abs(diferencia) < 50) {
-                return;
-            }
+    const finalTouchX = event.changedTouches[0].clientX;
+    const finalTouchY = event.changedTouches[0].clientY;
 
-            // Deslizar hacia la izquierda → siguiente
-            if (diferencia > 0) {
-                moverCarrusel(1);
-            }
+    const diferenciaX = inicioTouchX - finalTouchX;
+    const diferenciaY = inicioTouchY - finalTouchY;
 
-            // Deslizar hacia la derecha → anterior
-            else {
-                moverCarrusel(-1);
-            }
+    // Si el movimiento es principalmente vertical,
+    // dejamos que la página siga desplazándose normalmente.
+    if (Math.abs(diferenciaY) > Math.abs(diferenciaX)) {
+        return;
+    }
 
-        });
+    // Movimiento horizontal demasiado pequeño
+    if (Math.abs(diferenciaX) < 50) {
+        return;
+    }
+
+    // Izquierda → siguiente
+    if (diferenciaX > 0) {
+
+        moverCarrusel(1);
+
+    }
+
+    // Derecha → anterior
+    else {
+
+        moverCarrusel(-1);
+
+    }
+
+}, { passive: true });
 
 
         // =====================================================
