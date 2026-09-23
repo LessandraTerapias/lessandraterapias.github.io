@@ -704,3 +704,93 @@ document.addEventListener(
     "DOMContentLoaded",
     cargarSeccionResenas
 );
+
+// ==========================================
+// CARGAR FOOTER
+// ==========================================
+
+async function cargarFooter() {
+
+    const contenedor = document.getElementById("contenedor-footer");
+
+    if (!contenedor) return;
+
+    try {
+
+        const respuesta = await fetch("footer.html");
+
+        if (!respuesta.ok) {
+            throw new Error(`Error HTTP ${respuesta.status}`);
+        }
+
+        const html = await respuesta.text();
+
+        contenedor.innerHTML = html;
+
+    } catch (error) {
+
+        console.error(
+            "No se pudo cargar el footer:",
+            error
+        );
+
+    }
+}
+
+document.addEventListener(
+    "DOMContentLoaded",
+    cargarFooter
+);
+
+
+// ==========================================
+// CARGAR HEADER
+// ==========================================
+
+async function cargarHeader() {
+
+    const contenedor = document.getElementById("contenedor-header");
+
+    if (!contenedor) return;
+
+    try {
+
+        // Cargamos el header
+        const respuesta = await fetch("header.html");
+
+        if (!respuesta.ok) {
+            throw new Error(`Error HTTP ${respuesta.status}`);
+        }
+
+        const html = await respuesta.text();
+
+        contenedor.innerHTML = html;
+
+
+        // ==========================================
+        // CARGAR DROPDOWN DENTRO DEL HEADER
+        // ==========================================
+
+        const dropdown = document.getElementById("contenedor-dropdown");
+
+        if (!dropdown) return;
+
+        const respuestaDropdown = await fetch("dropdown.html");
+
+        if (!respuestaDropdown.ok) {
+            throw new Error(`Error HTTP ${respuestaDropdown.status}`);
+        }
+
+        const htmlDropdown = await respuestaDropdown.text();
+
+        dropdown.innerHTML = htmlDropdown;
+
+
+    } catch (error) {
+
+        console.error("No se pudo cargar el header:", error);
+
+    }
+}
+
+document.addEventListener("DOMContentLoaded", cargarHeader);
