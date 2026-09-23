@@ -5,6 +5,14 @@
     box-sizing:border-box;
 
 }
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
+@import url('stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css');
+@import url('"https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet');
+@import url('"https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet');
+@import url('"https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&display=swap" rel="stylesheet');
+
+
 body {
 
     width:100%;
@@ -1297,43 +1305,50 @@ footer {
 /* =========================================================
    FLECHAS
    ========================================================= */
+/* =========================================================
+   FLECHAS DEL CARRUSEL DE RESEÑAS
+   Mismo estilo que el slider superior
+   ========================================================= */
 
 .reviews-arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-
-    width: 42px;
-    height: 42px;
-
-    border: none;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
-
-    background: #ffffff;
-    color: #6f329b;
-
-    font-size: 34px;
-    line-height: 36px;
-
+    border: 1px solid rgba(201, 167, 235, .75);
+    background: rgba(201, 167, 235, .55);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: #7b3fa0;
+    font-size: 14px;
+    line-height: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-
     cursor: pointer;
-
-    box-shadow: 0 3px 12px rgba(80, 40, 100, 0.18);
-
+    opacity: .85;
     z-index: 5;
-
     transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease,
-        opacity 0.2s ease;
+        transform .35s ease,
+        opacity .35s ease,
+        background .35s ease,
+        border-color .35s ease,
+        box-shadow .35s ease;
 }
 
 .reviews-arrow:hover {
-    transform: translateY(-50%) scale(1.08);
-    box-shadow: 0 5px 18px rgba(80, 40, 100, 0.25);
+    transform: translateY(-50%) scale(1.12);
+
+    opacity: 1;
+
+    background: rgba(201,167,235,.25);
+
+    border-color: rgba(255,255,255,.7);
+
+    box-shadow:
+        0 0 15px rgba(201,167,235,.45);
 }
 
 .reviews-arrow-left {
@@ -1342,19 +1357,6 @@ footer {
 
 .reviews-arrow-right {
     right: 5px;
-}
-
-
-/* Flecha desactivada */
-
-.reviews-arrow:disabled {
-    opacity: 0.25;
-    cursor: default;
-    box-shadow: none;
-}
-
-.reviews-arrow:disabled:hover {
-    transform: translateY(-50%);
 }
 
 
@@ -1405,8 +1407,8 @@ footer {
     }
 
     .reviews-arrow {
-        width: 36px;
-        height: 36px;
+        width: 32px;
+        height: 32px;
         font-size: 29px;
     }
 
@@ -1683,4 +1685,82 @@ footer {
         box-sizing: border-box;
     }
 
+}
+
+/* ==========================================
+   PÁGINAS LEGALES
+   ========================================== */
+
+.pagina-legal {
+    max-width: 900px;
+    margin: 80px auto 60px;
+    padding: 0 45px;
+    line-height: 1.7;
+    box-sizing: border-box;
+}
+
+.pagina-legal h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.pagina-legal h2 {
+    margin-top: 35px;
+    margin-bottom: 15px;
+}
+
+.pagina-legal p {
+    margin-bottom: 18px;
+}
+
+.pagina-legal ul {
+    margin: 10px 0 20px;
+    padding-left: 25px;
+}
+
+.pagina-legal li {
+    margin-bottom: 8px;
+}
+
+.pagina-legal a {
+    text-decoration: underline;
+}
+
+
+/* ==========================================
+   MÓVIL
+   ========================================== */
+
+@media (max-width: 600px) {
+
+    .pagina-legal {
+        margin: 50px auto 40px;
+        padding: 0 22px;
+        line-height: 1.6;
+    }
+
+    .pagina-legal h1 {
+        margin-bottom: 30px;
+        font-size: 30px;
+    }
+
+    .pagina-legal h2 {
+        margin-top: 30px;
+        font-size: 22px;
+    }
+
+}
+
+/* ==========================================
+   ENLACES DEL FOOTER
+   ========================================== */
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: white;
+    text-decoration: none;
 }
