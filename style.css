@@ -1309,46 +1309,37 @@ footer {
    FLECHAS DEL CARRUSEL DE RESEÑAS
    Mismo estilo que el slider superior
    ========================================================= */
-
 .reviews-arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    border: 1px solid rgba(201, 167, 235, .75);
-    background: rgba(201, 167, 235, .55);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    color: #7b3fa0;
-    font-size: 14px;
+
+    width: 24px;
+    height: 24px;
+
+    padding: 0;
+    border: none;
+    background: transparent;
+
+   color: #7030A0;
+    font-size: 20px;
     line-height: 1;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     cursor: pointer;
-    opacity: .85;
+    opacity: 0.85;
     z-index: 5;
-    transition:
-        transform .35s ease,
-        opacity .35s ease,
-        background .35s ease,
-        border-color .35s ease,
-        box-shadow .35s ease;
+
+    transition: opacity 0.3s ease,
+                transform 0.3s ease;
 }
 
 .reviews-arrow:hover {
-    transform: translateY(-50%) scale(1.12);
-
     opacity: 1;
-
-    background: rgba(201,167,235,.25);
-
-    border-color: rgba(255,255,255,.7);
-
-    box-shadow:
-        0 0 15px rgba(201,167,235,.45);
+    transform: translateY(-50%) scale(1.15);
 }
 
 .reviews-arrow-left {
@@ -1357,6 +1348,12 @@ footer {
 
 .reviews-arrow-right {
     right: 5px;
+}
+
+.reviews-arrow:disabled {
+    opacity: 0.2;
+    cursor: default;
+    box-shadow: none;
 }
 
 
@@ -1405,21 +1402,6 @@ footer {
     .review-card {
         flex: 0 0 100%;
     }
-
-    .reviews-arrow {
-        width: 32px;
-        height: 32px;
-        font-size: 29px;
-    }
-
-    .reviews-arrow-left {
-        left: 2px;
-    }
-
-    .reviews-arrow-right {
-        right: 2px;
-    }
-
 }
 
 
