@@ -394,79 +394,60 @@ async function cargarResenas() {
 
         track.addEventListener("transitionend", event => {
 
-            if (event.propertyName !== "transform") {
-                return;
-            }
+    if (event.propertyName !== "transform") {
+        return;
+    }
 
+    const cantidad = resenas.length;
 
-            const cantidad =
-                resenas.length;
+    const tarjeta = track.querySelector(".review-card");
 
+    if (!tarjeta) {
+        moviendo = false;
+        return;
+    }
 
-            /*
-             * Hemos llegado a las copias del final.
-             * Saltamos SIN animación al principio real.
-             */
+    const paso = tarjeta.getBoundingClientRect().width + 20;
 
-            if (indiceActual >= tarjetasVisibles + cantidad) {
+    // Llegamos a las copias del final
+    if (indiceActual >= tarjetasVisibles + cantidad) {
 
-                indiceActual = tarjetasVisibles;
+        indiceActual = tarjetasVisibles;
 
-                const tarjeta =
-                    track.querySelector(".review-card");
+        track.style.transition = "none";
 
-                const paso =
-                    tarjeta.getBoundingClientRect().width + 20;
+        track.style.transform =
+            `translate3d(${-indiceActual * paso}px, 0, 0)`;
 
+        // Forzamos al navegador a aplicar el salto sin animación
+        track.offsetHeight;
+    }
 
-                track.style.transition = "none";
+    // Llegamos a las copias del principio
+    else if (indiceActual <= 0) {
 
-                track.style.transform =
-                    `translate3d(${-indiceActual * paso}px, 0, 0)`;
+        indiceActual = cantidad;
 
+        track.style.transition = "none";
 
-                requestAnimationFrame(() => {
+        track.style.transform =
+            `translate3d(${-indiceActual * paso}px, 0, 0)`;
 
-                    track.style.transition =
-                        "transform 1s cubic-bezier(0.65, 0, 0.35, 1)";
+        // Forzamos al navegador a aplicar el salto sin animación
+        track.offsetHeight;
+    }
 
-                });
-            }
+    // Reactivamos la transición y liberamos el carrusel
+    requestAnimationFrame(() => {
 
+        track.style.transition =
+            "transform 1s cubic-bezier(0.65, 0, 0.35, 1)";
 
-            /*
-             * Hemos llegado a las copias del principio.
-             * Saltamos SIN animación al final real.
-             */
+        moviendo = false;
 
-            if (indiceActual <= 0) {
+    });
 
-                indiceActual = cantidad;
-
-                const tarjeta =
-                    track.querySelector(".review-card");
-
-                const paso =
-                    tarjeta.getBoundingClientRect().width + 20;
-
-
-                track.style.transition = "none";
-
-                track.style.transform =
-                    `translate3d(${-indiceActual * paso}px, 0, 0)`;
-
-
-                requestAnimationFrame(() => {
-
-                    track.style.transition =
-                        "transform 1s cubic-bezier(0.65, 0, 0.35, 1)";
-
-                });
-            }
-
-
-            moviendo = false;
-        });
+});
 
 
         // =====================================================
