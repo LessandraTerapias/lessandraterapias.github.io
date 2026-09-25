@@ -1746,3 +1746,14 @@ footer a:hover {
     color: white;
     text-decoration: none;
 }
+
+#contenedor-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+#contenedor-header .hero {
+    position: relative;
+}
