@@ -105,35 +105,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 <link rel="icon" type="image/png" href="logo_3.png">
 </head>
 
-<header class="hero">
-    <div class="hero-info"> 
-
-        <a href="index.html" class="logo-enlace">
-            <img src="logo_3.png"
-                 alt="Lessandra Rodrigues"
-                 class="hero-foto">
-        </a>
-
-
-        <div class="hero-texto">
-                <h1>
-        <a href="index.html" class="titulo-enlace">
-            Lessandra Rodrigues
-        </a>
-    </h1>
-        </div>
-    </div>
-
-     <div id="contenedor-dropdown"></div>
-
-<script>
-  fetch("dropdown.html")
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById("contenedor-dropdown").innerHTML = data;
-    });
-</script>
-</header>
+<div id="contenedor-header"></div>
 
 <header>
  <h1 class="page-title">Drenaje Linfático</h1>
@@ -208,13 +180,7 @@ Mi objetivo es que al finalizar la sesión sientas tu cuerpo más ligero, relaja
 
 
 <div id="contenedor-contact"></div>
-<script>
-fetch("contact.html")
-    .then(res => res.text())
-    .then(data => {
-        document.getElementById("contenedor-contact").innerHTML = data;
-    });
-</script>
+
 
 <footer>
  © 2026 Lessandra Rodrigues

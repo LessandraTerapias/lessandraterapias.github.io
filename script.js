@@ -797,3 +797,10 @@ async function cargarHeader() {
 }
 
 document.addEventListener("DOMContentLoaded", cargarHeader);
+
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll("#contenedor-contact").forEach(async (el) => {
+        const respuesta = await fetch("contact.html");
+        el.innerHTML = await respuesta.text();
+    });
+});

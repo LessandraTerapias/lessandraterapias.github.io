@@ -162,13 +162,7 @@
 <meta name="twitter:image" content="https://lessaterapias.es/lessandra3.png">
 
 
-<script>
-fetch("contact.html")
-    .then(res => res.text())
-    .then(data => {
-        document.getElementById("contenedor-contact").innerHTML = data;
-    });
-</script>
+
 
 </head>
 
@@ -178,33 +172,7 @@ fetch("contact.html")
 <body>
 
 
-<header class="hero">
-    <div class="hero-info">
-
-        <img src="logo_3.png"
-             alt="Lessandra Rodrigues"
-             class="hero-foto">
-
-        <div class="hero-texto">
-                <h1>
-        <a href="index.html" class="titulo-enlace">
-            Lessandra Rodrigues
-        </a>
-    </h1>
-        </div>
-    </div>
-
-     <div id="contenedor-dropdown"></div>
-
-<script>
-  fetch("dropdown.html")
-    .then(res => res.text())
-    .then(data => {
-      document.getElementById("contenedor-dropdown").innerHTML = data;
-    });
-</script>
-</header>
-
+<div id="contenedor-header"></div>
 
 
 <section class="hero-banner">
